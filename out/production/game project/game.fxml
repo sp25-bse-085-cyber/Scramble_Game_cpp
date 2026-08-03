@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="GameController">
+    <Pane fx:id="gamePane">
+        <HBox fx:id="scoreBox" layoutX="10" layoutY="10" spacing="10" style="-fx-background-color: rgba(0,0,0,0.7); -fx-padding: 10; -fx-background-radius: 8;">
+            <Label fx:id="scoreLabel" text="Score: 0" textFill="LIME">
+                <font>
+                    <Font name="Arial" size="18"/>
+                </font>
+            </Label>
+        </HBox>
+        
+        <HBox fx:id="livesBox" layoutY="10" spacing="10" style="-fx-background-color: rgba(0,0,0,0.7); -fx-padding: 10; -fx-background-radius: 8;">
+            <Label fx:id="livesLabel" text="♥ ♥ ♥" textFill="RED">
+                <font>
+                    <Font name="Arial" size="20"/>
+                </font>
+            </Label>
+        </HBox>
+        
+        <TextField fx:id="inputField" layoutX="-100" opacity="0"/>
+    </Pane>
+    
+    <VBox fx:id="pauseMenu" visible="false" alignment="CENTER" spacing="20" style="-fx-background-color: rgba(0,0,0,0.85);">
+        <Label text="⏸ PAUSED" textFill="#FFD700">
+            <font>
+                <Font name="Impact" size="50"/>
+            </font>
+        </Label>
+        
+        <Button fx:id="resumeBtn" text="▶ RESUME" onAction="#handleResume" prefWidth="250" prefHeight="45" style="-fx-background-color: #00CC66; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 2;">
+            <font>
+                <Font name="Arial" size="16"/>
+            </font>
+        </Button>
+        
+        <Button fx:id="menuBtn" text="🏠 MAIN MENU" onAction="#handleReturnToMenu" prefWidth="250" prefHeight="45" style="-fx-background-color: #FF6600; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 2;">
+            <font>
+                <Font name="Arial" size="16"/>
+            </font>
+        </Button>
+    </VBox>
+</StackPane>
